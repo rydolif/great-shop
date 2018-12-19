@@ -1,0 +1,253 @@
+
+@media only screen and (max-width : 1200px)
+
+	.header
+		font-size: 12px
+
+		.btn
+			font-size: 12px
+
+	.nav li::before
+		right: -27px
+
+	.banner
+		img
+			height: 350px
+
+		h2
+			font-size: 44px
+
+		&__right
+			img
+				height: 350px
+			div
+				padding: 15px
+
+		&__slider_slide
+			div
+				top: 20px
+
+	.footer
+		&__logo
+			margin-right: 15px
+
+	.nav--footer
+		li
+			margin-right: 20px
+
+		a
+			font-size: 12px
+
+
+
+@media only screen and (max-width : 992px)
+	.header
+		position: fixed
+		right: 0
+		left: 0
+		top: 0
+
+		&__icon a
+			margin: 0 10px
+
+			&::before
+				right: -10px
+
+		&__link
+			display: none
+
+		&__container
+			padding-right: 70px
+
+	.main
+		padding-top: 50px
+
+	.banner
+		img
+			height: 250px
+
+		h2
+			margin-bottom: 0
+
+		p
+			font-size: 14px
+			line-height: 1.3
+
+		&__right img
+			height: 250px
+
+	.bestsellers
+		.banner__right img
+			height: auto
+
+		h2::before
+			width: 88%
+	
+	.footer
+		.header__link
+			display: block
+
+
+	.nav
+		display: none
+
+		&--responsive
+			position: fixed
+			display: block
+			width: 320px
+			height: 100%
+			flex-direction: column
+			right: -100%
+			top: 50px
+			z-index: -1
+			background-color: #2e2e2e
+			transition: all .5s
+			overflow: auto
+			padding-bottom: 80px
+
+			ul
+				display: flex
+				flex-direction: column
+				justify-content: center
+				margin-top: 25px
+				margin-left: 25px
+				margin-right: 25px
+
+			li
+				margin: 0
+				margin-bottom: 10px
+
+			div
+				margin-top: 25px
+				margin-left: 25px
+				margin-right: 25px
+				a
+					margin-bottom: 10px
+
+			a
+				display: flex
+				color: #fff
+				font-size: 14px
+
+			.btn
+				padding: 0 15px
+				justify-content: center
+			
+		&--active
+			right: 0
+			z-index: 1000
+
+	.hamburger
+		display: block
+
+
+
+@media only screen and (max-width : 767px)
+	.banner
+
+		h2
+			font-size: 30px
+
+
+		&__container
+			flex-direction: column
+
+		img
+			height: auto
+
+		&__slider
+			width: 100%
+
+			a
+				max-height: 100%
+
+			&_slide
+				div
+					top: 15px
+					left: 15px
+
+		&__right
+			width: 100%
+			max-height: 100%
+
+	.logo
+		font-size: 54px
+		a
+			span
+				margin: 0 15px
+
+	.bestsellers
+		padding-bottom: 40px
+
+		h2
+			font-size: 30px
+
+
+@media only screen and (max-width : 576px)
+	.bestsellers h2::before
+		width: 80%
+
+
+@media only screen and (max-width : 480px)
+	.banner
+		padding: 15px 0
+
+		a
+			min-height: 250px
+
+			img
+				position: absolute
+				left: auto
+				right: auto
+				width: auto
+				height: 100%
+
+		br
+			display: none
+
+	.logo
+		padding: 15px 0
+		font-size: 30px
+
+		img
+			width: 30px
+	.main
+		padding-top: 96px
+
+	.nav--responsive
+		top: 86px
+
+	
+	.footer
+		&__logo
+			margin-bottom: 20px
+
+		&__container
+			flex-direction: column
+			align-items: center
+
+		.header__link
+			text-align: center
+
+	.bestsellers
+		h2
+			margin-bottom: 50px
+
+		.slick-arrow
+			top: -30px
+
+	.header__container
+		flex-direction: column
+
+		.btn
+			margin-bottom: 15px
+
+
+
+
+
+
+
+
+
+

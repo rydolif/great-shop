@@ -1,0 +1,488 @@
+@import "libs"
+@import "base"
+
+
+.header
+	background-color: #2e2e2e
+	padding: 10px 0
+	transition: all .3s
+	z-index: 1001
+
+	a
+		color: #fff
+
+	&__link
+		line-height: 1.2
+		display: flex
+		align-items: center
+		position: relative
+		z-index: 1
+		
+		&::before
+			content: ''
+			width: 0
+			transform: scale(0)
+			transition: all .3s
+			position: absolute
+			bottom: 0
+			width: 100%
+			height: 1px
+			background-color: #fff
+			z-index: -1
+
+		&:hover,
+		&:focus
+			color: #fff
+			text-decoration: none
+			&::before
+				transform: scale(1)
+
+		img
+			margin-right: 10px
+
+	.btn
+		height: 40px
+		line-height: 40px
+		font-size: 14px
+		font-weight: 400
+		padding: 0 18px
+
+	&__icon
+		a
+			position: relative
+			margin: 0 20px
+			
+			&:hover
+				img
+					 animation: hover .3s linear 1 forwards
+
+			&::before
+				content: ''
+				position: absolute
+				right: -20px
+				height: 100%
+				width: 1px
+				background: rgba(255, 255, 255, .1)
+
+
+			&:last-child
+				&::before
+					display: none
+
+			img
+				animation: hover-back .3s linear 1 forwards
+		
+
+	&--active
+		background-color: #2e2e2e
+		padding: 5px 0
+
+	&--menu
+		background-color: #2e2e2e
+		padding: 5px 0
+
+	&__container
+		position: relative
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+
+	&-wrap
+		padding-top: 25px
+		padding-bottom: 40px
+		display: flex
+		flex-direction: row
+		align-items: center
+		text-align: center
+		border-bottom: 1px solid #000
+	
+
+.logo
+	text-align: center
+	font-weight: 900
+	font-size: 72px
+	text-transform: uppercase
+	padding: 30px 0
+
+	a
+		color: $text
+		display: flex
+		align-items: center
+		justify-content: center
+		line-height: 1
+
+		span
+			margin: 0 25px
+
+
+.nav
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: space-between
+
+	ul
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+
+	li
+		position: relative
+
+		&::before
+			content: ''
+			position: absolute
+			right: -50px
+			height: 100%
+			width: 1px
+			background: #2e2e2e
+			opacity: 0.1
+
+		&:last-child
+			&::before
+				display: none
+
+	a
+		color: $text
+		position: relative
+		z-index: 1
+		font-size: 18px
+		
+		&::before
+			content: ''
+			width: 0
+			transform: scale(0)
+			transition: all .3s
+			position: absolute
+			bottom: 0
+			width: 100%
+			height: 1px
+			background-color: $text
+			z-index: -1
+
+		&:hover
+			color: $text
+			text-decoration: none
+			&::before
+				transform: scale(1)
+
+		&:focus
+			color: $text
+			text-decoration: none
+			&::before
+				transform: scale(1)
+
+	&--responsive
+		z-index: 1000
+		display: none
+
+
+	&--white
+		padding: 20px 0
+
+	&--blue
+		padding: 24px 0
+		background-color: #22a3c9
+
+		a
+			color: #fff
+
+			&:hover
+				color: #fff
+
+			&::before
+					background-color: #fff
+
+	&--footer
+		display: flex
+		flex-direction: column
+
+		ul
+			position: relative
+			margin-bottom: 25px
+
+			&::before
+				content: ''
+				position: absolute
+				bottom: -12px
+				height: 1px
+				width: 100%
+				background-color: #444444
+				opacity: .1
+
+		li
+			margin-right: 50px
+
+			&::before
+				display: none
+
+			&:last-child
+				margin-right: 0
+
+
+		a
+			font-size: 16px
+			color: #fff
+			font-weight: 300
+
+			&::before
+				background: #fff
+
+			&:hover,
+			&:focus
+				color: #fff
+
+
+		&__info
+			display: flex
+			width: 100%
+
+			a
+				font-size: 14px
+				margin-bottom: 20px
+
+			div
+				display: flex
+				flex-direction: column
+
+			div:first-child
+				margin-right: 105px
+
+
+.banner
+	padding: 30px 0
+
+	img
+		width: 100%
+		height: 400px
+
+
+	h2
+		font-size: 60px
+		font-weight: 800
+		margin-bottom: 30px
+
+
+	&__slider
+		a
+			color: #fff
+			line-height: 1.8
+			overflow: hidden
+			max-height: 400px
+			height: 100%
+
+
+			&:hover
+				img
+					animation: slide-hover .6s linear 1 forwards
+
+		img
+			animation: slide-hover-back .6s linear 1 forwards
+
+
+	&__container
+		display: flex
+		justify-content: space-between
+
+
+	&__right
+		width: 25%
+		max-height: 400px
+		position: relative
+		overflow: hidden
+		color: #fff
+		text-transform: uppercase
+		font-size: 18px
+		line-height: 1
+		z-index: 1
+		text-align: center
+
+		&:hover
+			&::before
+				left: 0
+
+			div
+				left: 50%
+				transform: translate(-50%, -50%)
+
+
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: -100%
+			width: 100%
+			height: 100%
+			background-color: rgba(#2e2e2e, .9)
+			transition: all .5s
+			z-index: 1
+
+		img
+			width: 100%
+			height: 400px
+
+		div
+			display: flex
+			flex-direction: column
+			align-items: center
+			position: absolute
+			left: -100%
+			top: 50%
+			transform: translate(0, -50%)
+			width: 100%
+			transition: all .5s
+			z-index: 2
+			padding: 40px
+
+		.btn
+			border-radius: 0
+			font-size: 18px
+			font-weight: 400
+			width: 100%
+			height: 44px
+			line-height: 44px
+			color: #1fb9e5
+			max-width: 300px
+
+			&:hover,
+			&:focus
+				color: #fff
+
+		&_title
+			margin-bottom: 15px
+
+		&_price
+			margin-bottom: 50px
+
+	&__slider
+		width: 74%
+		margin-bottom: 0 !important
+
+		&_slide
+			position: relative
+			div
+				position: absolute
+				left: 35px
+				top: 60px
+
+
+.slick-dots
+	bottom: 30px
+	left: 35px
+	width: auto
+
+	li
+		button
+			background: transparent
+			border-radius: 50%
+			border: 1px solid #fff
+			width: 21px
+			height: 21px
+
+			&::before
+				display: none
+
+	.slick-active
+		button
+			background-color: #22a3c9
+			border: 1px solid #22a3c9
+
+
+.philosopher
+	&__wrap
+		display: block
+		padding-top: 20px
+		padding-bottom: 20px
+		background: url("../img/philosopher.jpg") no-repeat center top / cover
+	h3
+		text-align: center
+		font-size: 18px
+		font-weight: 800
+		color: #2e2e2e
+
+
+.bestsellers
+	padding-top: 30px
+	padding-bottom: 105px
+
+	h2
+		text-transform: uppercase
+		line-height: 1
+		margin-bottom: 30px
+		font-size: 36px
+		font-weight: 800
+		position: relative
+
+		span
+			background-color: #fff
+			z-index: 1
+			padding-right: 15px
+
+		&::before
+			content: ''
+			position: absolute
+			bottom: 0
+			width: 93%
+			height: 1px
+			background: $text
+			z-index: -1
+
+	.banner__right
+		max-width: 98%
+
+	.slick-arrow
+		width: 26px
+		height: 26px
+		border-radius: 50%
+		border: 2px solid $text
+		top: -45px
+		right: 40px
+		left: auto
+		opacity: .6
+		transition: all .5s
+
+		&:hover
+			opacity: 1
+		
+		&::before
+			content: ''
+			position: absolute
+			left: 50%
+			top: 50%
+			width: 10px
+			height: 10px
+			border-left: 2px solid $text
+			border-top: 2px solid $text
+			transform: translate(-30%, -50%) rotate(-45deg)
+
+	.slick-next
+		right: 0
+		&::before
+			transform: translate(-70%, -50%) rotate(135deg)
+
+
+.footer
+	padding-top: 23px
+	padding-bottom: 23px
+	background-color: #2e2e2e
+	
+	&__container
+		display: flex
+		justify-content: space-between
+
+	&__info
+		display: flex
+		flex-direction: column
+
+		a
+			color: #fff
+			font-size: 16px
+			margin-bottom: 20px
+			font-weight: 700
+
+	&__logo
+		margin-right: 60px
+
+@import "page"
+@import "media" // Always at the end
